@@ -3,81 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LIT Candle | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="LIT Candle - Premium handmade candles for every mood and moment. Shop our collection of scented candles." />
+  <title>LIT Candle | Premium Handmade Candles</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
   <div class="page-wrapper">
     <header>
-      <div class="container">
-        <h1>LIT Candle</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-           </div>
-            <div class="nav-right">
-              <a href="cart.html" class="cart-link">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-              </a>
-            </div>        
-        </nav>
-      </div>
-    </header>
-
-    <main class="hero-section fade-in">
-      <div class="container">
-        <h2>Light up your life with LIT</h2>
-        <p>Premium handmade candles for every mood and moment.</p>
-        <a href="shop.html" class="btn">Shop Now</a>
-      </div>
-    </main>
-
-    <!-- ✨ Featured Products Preview -->
-    <section class="featured">
-      <div class="container">
-        <h3>Featured Candles</h3>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="Images/Candle1.jpeg" alt="Vanilla Candle">
-            <h4>Vanilla Bliss</h4>
-            <p>$12.99</p>
+      <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="index.html" class="brand" aria-current="page">
+              <img src="images/LOGO.jpg" alt="LIT CANDLE Logo" class="logo" />
+              <span>LIT CANDLE</span>
+            </a>
+            <div class="nav-links">
+              <a href="index.html" aria-current="page">Home</a>
+              <a href="shop.html">Shop</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
           </div>
-          <div class="product-card">
-            <img src="Images/Candle2.jpeg" alt="Lavender Candle">
-            <h4>Lavender Calm</h4>
-            <p>$14.99</p>
-          </div>
-          <div class="product-card">
-            <img src="Images/Candle1.jpeg" alt="Citrus Spark">
-            <h4>Citrus Spark</h4>
-            <p>$13.99</p>
+          <div class="nav-right">
+            <a href="cart.html" class="cart-icon">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span class="hamburger"></span>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="mobile-menu">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-    <!-- 🧘 Brand Quote / Testimonial
-    <!-- <section class="quote">
-      <div class="container">
-        <blockquote>"LIT Candles turned my evenings into rituals. The scents are divine!" – A Happy Customer</blockquote>
-      </div>
-    </section> --> 
+    <main role="main">
+      <section class="hero-section fade-in" aria-label="Hero section">
+        <div class="container">
+          <h2>Light up your life with LIT</h2>
+          <p>Premium handmade candles for every mood and moment.</p>
+        </div>
+      </section>
 
-    <footer>
+      <section class="featured" aria-labelledby="featured-title">
+        <div class="container">
+          <h3 id="featured-title">Featured Candles</h3>
+          <div class="product-grid">
+            <article class="product-card" data-product-id="1" data-price="12.99">
+              <img src="Images/1.jpg" alt="Vanilla scented candle in a glass jar" loading="lazy" width="300" height="300">
+              <h4>Vanilla Bliss</h4>
+              <p class="price">$12.99</p>
+              <button type="button" class="add-to-cart" aria-label="Add Vanilla Bliss to cart">Add to Cart</button>
+            </article>
+            <article class="product-card" data-product-id="2" data-price="14.99">
+              <img src="Images/8.jpg" alt="Lavender scented candle in a glass jar" loading="lazy" width="300" height="300">
+              <h4>Lavender Calm</h4>
+              <p class="price">$14.99</p>
+              <button type="button" class="add-to-cart" aria-label="Add Lavender Calm to cart">Add to Cart</button>
+            </article>
+            <article class="product-card" data-product-id="3" data-price="13.99">
+              <img src="Images/12.jpg" alt="Citrus scented candle in a glass jar" loading="lazy" width="300" height="300">
+              <h4>Citrus Spark</h4>
+              <p class="price">$13.99</p>
+              <button type="button" class="add-to-cart" aria-label="Add Citrus Spark to cart">Add to Cart</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote" aria-label="Customer testimonial">
+        <div class="container">
+          <blockquote>
+            <p>"LIT Candles turned my evenings into rituals. The scents are divine!"</p>
+            <footer>— A Happy Customer</footer>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
       <div class="container">
         <p>&copy; 2025 LIT Candle. All rights reserved.</p>
       </div>
     </footer>
   </div>
 
-  <!-- 🔝 Scroll to top -->
-  <button id="scrollTopBtn" title="Back to top">↑</button>
+  <button id="scrollTopBtn" type="button" title="Back to top" aria-label="Scroll to top">↑</button>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

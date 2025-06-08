@@ -3,65 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LIT Candle | Shop</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="Shop our collection of premium handmade candles at LIT Candle. Find the perfect scent for every mood and moment." />
+  <title>Shop - LIT CANDLE</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="shop.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
   <div class="page-wrapper">
     <header>
-      <div class="container">
-        <h1>LIT Candle</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li>
-              <a href="cart.html" class="cart-link">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="index.html" class="brand">
+              <img src="images/LOGO.jpg" alt="LIT CANDLE Logo" class="logo" />
+              <span>LIT CANDLE</span>
+            </a>
+            <div class="nav-links">
+              <a href="index.html">Home</a>
+              <a href="shop.html" aria-current="page">Shop</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="nav-right">
+            <a href="cart.html" class="cart-icon">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span class="hamburger"></span>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <a href="index.html">Home</a>
+          <a href="shop.html" aria-current="page">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
     </header>
 
-    <main class="shop-page container">
-      <h2>Shop Our Candles</h2>
-      <div class="shop-grid">
-        <div class="product-card">
-          <img src="Images/Candle1.jpeg" alt="Vanilla Bliss">
+    <main class="shop-page">
+      <div class="shop-header">
+        <h1>Our Collection</h1>
+        <p>Discover our range of premium handmade candles, each crafted with care and natural ingredients.</p>
+      </div>
+
+      <div class="shop-controls">
+        <div class="search-bar">
+          <input type="text" placeholder="Search candles..." aria-label="Search candles">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-sort">
+          <select aria-label="Sort by">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-product-id="1" data-price="12.99">
+          <img src="Images/1.jpg" alt="Vanilla scented candle in a glass jar" loading="lazy" width="300" height="300">
           <h4>Vanilla Bliss</h4>
-          <p>$12.99</p>
-          <button class="btn">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="Images/Candle1.jpeg" alt="Lavender Calm">
+          <p class="price">$12.99</p>
+          <button type="button" class="add-to-cart" aria-label="Add Vanilla Bliss to cart">Add to Cart</button>
+        </article>
+        
+        <article class="product-card" data-product-id="2" data-price="14.99">
+          <img src="Images/2.jpg" alt="Lavender scented candle in a glass jar" loading="lazy" width="300" height="300">
           <h4>Lavender Calm</h4>
-          <p>$14.99</p>
-          <button class="btn">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <img src="Images/Candle1.jpeg" alt="Citrus Spark">
+          <p class="price">$14.99</p>
+          <button type="button" class="add-to-cart" aria-label="Add Lavender Calm to cart">Add to Cart</button>
+        </article>
+        
+        <article class="product-card" data-product-id="3" data-price="13.99">
+          <img src="Images/3.jpg" alt="Citrus scented candle in a glass jar" loading="lazy" width="300" height="300">
           <h4>Citrus Spark</h4>
-          <p>$13.99</p>
-          <button class="btn">Add to Cart</button>
+          <p class="price">$13.99</p>
+          <button type="button" class="add-to-cart" aria-label="Add Citrus Spark to cart">Add to Cart</button>
+        </article>
+        
+        <article class="product-card" data-product-id="4" data-price="15.99">
+          <img src="Images/4.jpg" alt="Ocean breeze scented candle in a glass jar" loading="lazy" width="300" height="300">
+          <h4>Ocean Breeze</h4>
+          <p class="price">$15.99</p>
+          <button type="button" class="add-to-cart" aria-label="Add Ocean Breeze to cart">Add to Cart</button>
+        </article>
+        
+        <article class="product-card" data-product-id="5" data-price="16.99">
+          <img src="Images/5.jpg" alt="Cinnamon spice scented candle in a glass jar" loading="lazy" width="300" height="300">
+          <h4>Cinnamon Spice</h4>
+          <p class="price">$16.99</p>
+          <button type="button" class="add-to-cart" aria-label="Add Cinnamon Spice to cart">Add to Cart</button>
+        </article>
+      </div>
+
+      <div class="quick-view">
+        <div class="quick-view-header">
+          <h2>Product Details</h2>
+          <button class="close-quick-view" aria-label="Close quick view">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-        <!-- Add more products here -->
+        <div class="quick-view-content">
+          <!-- Quick view content will be dynamically inserted here -->
+        </div>
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 LIT Candle. All rights reserved.</p>
-      </div>
-    </footer>
+    <button class="scroll-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
+</html> 

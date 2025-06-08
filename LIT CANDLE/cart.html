@@ -3,37 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cart | LIT Candle</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="View and manage your shopping cart at LIT Candle. Review your items and proceed to checkout." />
+  <title>Shopping Cart - LIT CANDLE</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
   <div class="page-wrapper">
     <header>
-      <div class="container">
-        <h1>LIT Candle</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="index.html" class="brand">
+              <img src="images/LOGO.jpg" alt="LIT CANDLE Logo" class="logo" />
+              <span>LIT CANDLE</span>
+            </a>
+            <div class="nav-links">
+              <a href="index.html">Home</a>
+              <a href="shop.html">Shop</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="nav-right">
+            <a href="cart.html" class="cart-icon" aria-current="page">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="container">
-      <h2>Your Cart</h2>
-      <p>Cart functionality coming soon!</p>
+    <main class="cart-page">
+      <div class="cart-header">
+        <h1>Shopping Cart</h1>
+      </div>
+
+      <div class="cart-container">
+        <div class="cart-items">
+          <!-- Cart items will be dynamically inserted here by JavaScript -->
+        </div>
+
+        <div class="cart-summary">
+          <!-- Cart summary will be dynamically inserted here by JavaScript -->
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 LIT Candle. All rights reserved.</p>
-      </div>
-    </footer>
+    <button class="scroll-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </div>
+
+  <script src="cart.js"></script>
 </body>
 </html>
